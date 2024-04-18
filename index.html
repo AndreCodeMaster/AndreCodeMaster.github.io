@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel de Contagem</title>
+    <title>Login</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-    <div class="logo">
-        <img src="sesi.png" alt="Sua Logo">
+    <div class="background-container">
+        <div class="login-container">
+            <div class="logo-container">
+                <!-- Coloque sua imagem de logo aqui -->
+                <img src="sesi.png" alt="Logo">
+            </div>
+            <h2>Login</h2>
+            <form>
+                <input type="text" placeholder="Usuario" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
     </div>
-</header>
-<main>
-    <div class="retangulo-central">
-        <div id="painel-contagem" class="painel-contagem">Total de pessoas: 32</div>
-        <button onclick="adicionarPessoa()">Adicionar Pessoa</button>
-        <button onclick="removerPessoa()">Remover Pessoa</button>
-    </div>
-</main>
-<footer>
-    <div class="barra-preta"></div>
-</footer>
-<div class="faixa-preta-final"></div> <!-- Faixa preta no final da página -->
 
-<script src="contagem.js"></script>
 </body>
 </html>
+<a href="index2.html">Link para página 2</a>

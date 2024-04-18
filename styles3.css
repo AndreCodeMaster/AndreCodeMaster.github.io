@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('imagem.jpg'); /* Substitua pelo caminho da sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: black;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 200px; /* Ajuste conforme necessário */
+}
+
+.retangulo-central {
+    width: 700px; /* Ajuste conforme necessário */
+    height: 1700px; /* Ajuste conforme necessário */
+    background-color: white;
+    margin: 20px auto; /* Centraliza horizontalmente */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    padding-top: 20px; /* Adiciona espaço entre o início do quadrado branco e o primeiro retângulo cinza */
+}
+
+.lista-retangulos {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0; /* Adiciona um espaço entre a barra preta e a lista de retângulos */
+    text-align: center; /* Centraliza o texto na lista */
+}
+
+.lista-retangulos li {
+    width: 550px; /* Ajuste conforme necessário */
+    height: 40px;
+    background-color: #787878; /* Cor de fundo dos retângulos */
+    margin: 10px auto; /* Centraliza horizontalmente */
+    line-height: 50px; /* Centraliza verticalmente o texto */
+    color: white; /* Cor do texto */
+    font-size: 20px; /* Ajuste o tamanho da fonte */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    font-family: 'Tahoma', sans-serif; /* Altera a fonte */
+}
+
+.barra-branca {
+    background-color: rgb(255, 255, 255);
+    height: 1px;
+}
+
+.barra-preta {
+    background-color: rgb(255, 255, 255);
+    height: 1px;
+}
+
+.faixa-preta-final{
+    background-color: rgb(0, 0, 0);
+    height: 100px;
+}

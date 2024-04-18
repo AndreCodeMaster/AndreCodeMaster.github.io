@@ -1,64 +1,60 @@
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('imagem.jpg'); /* Substitua pelo caminho da sua imagem de fundo */
+    background-image: url('imagem.jpg'); /* Caminho para sua imagem de fundo */
     background-size: cover;
     background-position: center;
 }
 
-header {
-    background-color: black;
-    padding: 10px;
+.background-container {
+    position: relative;
 }
 
-.logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.logo img {
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px; /* Ajuste conforme necessário */
+}
+
+.logo-container img {
     max-width: 200px; /* Ajuste conforme necessário */
 }
 
-.retangulo-central {
-    width: 700px; /* Ajuste conforme necessário */
-    height: 447px; /* Ajuste conforme necessário */
-    background-color: white;
-    margin: 20px auto; /* Centraliza horizontalmente */
-    border-radius: 10px; /* Adiciona bordas arredondadas */
-    padding-top: 30px; /* Adiciona espaço entre o início do quadrado branco e o primeiro retângulo cinza */
+h2 {
+    text-align: center;
 }
 
-.painel-contagem {
-    text-align: center;
-    font-size: 50px; /* Ajusta o tamanho da fonte */
-    margin-bottom: 20px;
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
 button {
-    display: block;
-    margin: 0 auto 10px;
-    padding: 20px 40px; /* Ajusta o padding para aumentar o tamanho dos botões */
-    font-size: 30px; /* Ajusta o tamanho da fonte */
-    cursor: pointer;
-    background-color: #4c4c4c;
-    color: white;
+    background-color: #656565;
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #4c4c4c;
-}
-
-footer {
-    background-color: black;
-    padding: 10px;
-}
-
-.faixa-preta-final {
-    background-color: rgb(0, 0, 0);
-    height: 100px;
+    background-color: #ff0000;
 }

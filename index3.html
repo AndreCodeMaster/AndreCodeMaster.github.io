@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 3 Alunos</title>
+    <link rel="stylesheet" href="styles3.css">
+    <style>
+        /* Estilo adicional para a faixa preta no final */
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="sesi.png" alt="Sua Logo">
+        </div>
+    </header>
+    <main>
+        <div class="retangulo-central">
+            <ul id="lista-alunos" class="lista-retangulos">
+                <!-- Lista de alunos será gerada pelo JavaScript -->
+            </ul>
+        </div>
+        <div class="retangulo-preto"></div> <!-- Retângulo preto no final da tela -->
+        <div id="painel-contagem" class="painel-contagem"></div>
+    </main>
+    <footer>
+        <div class="barra-preta"></div>
+    </footer>
+    <div class="faixa-preta-final"></div> <!-- Faixa preta no final da página -->
+
+    <script>
+        // Nomes dos alunos (fixos)
+        const nomesAlunos = [
+        "João da Silva",
+    "Maria Santos",
+    "Pedro Oliveira",
+    "Ana Souza",
+    "Carlos Pereira",
+    "Laura Almeida",
+    "Lucas Costa",
+    "Gabriela Lima",
+    "Rafael Fernandes",
+    "Fernanda Martins",
+    "Matheus Barbosa",
+    "Juliana Oliveira",
+    "Marcos Silva",
+    "Camila Pereira",
+    "Rodrigo Santos",
+    "Carolina Almeida",
+    "Gustavo Fernandes",
+    "Amanda Costa",
+    "Marcelo Santos",
+    "Isabela Martins",
+    "Felipe Oliveira",
+    "Letícia Barbosa",
+    "Diego Silva",
+    "Natália Lima",
+    "Vinícius Fernandes",
+    "Mariana Costa",
+    "Alex Oliveira",
+    "Luiza Souza",
+    "Bruno Santos",
+    "Larissa Martins",
+    "Daniel Pereira",
+    "Thaís Lima"
+            // Adicione mais nomes conforme necessário
+        ];
+
+        // Lista de alunos
+        const alunos = [];
+        const totalAlunos = nomesAlunos.length; // Total de alunos
+
+        // Gerar a lista de alunos
+        const listaAlunos = document.getElementById('lista-alunos');
+        for (let i = 0; i < totalAlunos; i++) {
+            const aluno = document.createElement('li');
+            aluno.textContent = nomesAlunos[i];
+            aluno.addEventListener('click', toggleAluno);
+            alunos.push(true); // Inicialmente todos os alunos estão habilitados
+            listaAlunos.appendChild(aluno);
+        }
+
+        // Função para habilitar/desabilitar aluno
+        function toggleAluno() {
+            const index = Array.from(listaAlunos.children).indexOf(this);
+            alunos[index] = !alunos[index]; // Inverte o status do aluno
+            this.classList.toggle('desabilitado'); // Adiciona ou remove a classe 'desabilitado'
+            this.classList.toggle('selecionado'); // Adiciona ou remove a classe 'selecionado' ao clicar
+
+            // Atualiza o painel de contagem
+            atualizarContagem();
+        }
+
+        // Função para atualizar o painel de contagem
+        function atualizarContagem() {
+            const alunosHabilitados = alunos.filter(aluno => aluno).length;
+            const painelContagem = document.getElementById('painel-contagem');
+            painelContagem.textContent = `Total de alunos ${alunosHabilitados}/${totalAlunos}`;
+        }
+    </script>
+</body>
+</html>
